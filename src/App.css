@@ -1,0 +1,60 @@
+.App{
+  width: 50%;
+  margin: 0 auto;
+  background-color: antiquewhite;
+  position: relative;
+}
+.formContainer{
+  display: flex;
+  align-items: center;
+  padding: 50px;
+}
+.label{
+  width: 150px;
+  display: inline-block;
+}
+.formItem{
+  margin-top: 10px;
+}
+.center{
+  text-align: center;
+  margin-top: 20px;
+}
+.padding-20{
+  padding: 20px;
+}
+.textBox{
+  padding: 10px;
+  width:200px;
+}
+.mr-20{
+  margin-right: 20px;
+}
+input[type="button"]{
+  width: 150px;
+    padding: 20px;
+    margin-top: 25px;
+}
+.width-200{
+  width: 200px ;
+}
+.button{
+  padding: 10px 30px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+.accept{
+  background: green;
+}
+.reject{
+  background-color: red;
+}
+button[disabled]{
+  opacity: .5;
+}
+.position-right{
+  position: absolute;
+  right: 20px;
+}
