@@ -1,9 +1,10 @@
 .App{
   width: 50%;
   margin: 0 auto;
-  background-color: antiquewhite;
+  background-color: rgb(240, 239, 239);
   position: relative;
 }
+/* 
 .formContainer{
   display: flex;
   align-items: center;
@@ -57,4 +58,4 @@ button[disabled]{
 .position-right{
   position: absolute;
   right: 20px;
-}
+} */

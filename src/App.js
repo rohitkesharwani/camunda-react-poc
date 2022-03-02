@@ -1,32 +1,39 @@
-import React, { useState } from "react";
-import TaskForm from "./taskForm";
-import ProcessRunner from "./processRunner";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Login from "./Page/Login"
+import UserAuth from "./Page/userAuth";
+import UserProcessFlow from "./Page/UserProcessFlow";
 import "./App.css";
 
-function App() {
-  const [taskForm, setTaskForm] = useState(true);
-  const [processId, setProcessId] = useState('')
-
-  const taskFormHandler = (val, id) => {
-    console.log('result', val, id);
-    if(id){
-      setTaskForm(val);
-      setProcessId(id);
-    }
-  };
-  const ProcessHandler = () => {
-    console.log('result');
-  }
+export default function App() {
   return (
-    <div className="App">
-      <h1 className="center padding-20">Camunda POC</h1>
-      {taskForm ? (
-        <TaskForm taskFormHandler={taskFormHandler} />
-      ) : (
-        <ProcessRunner processId={processId} ProcessHandler={ProcessHandler}/>
-      )}
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/userauth">Users</Link>
+            </li>
+          </ul>
+        </nav>
+
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/start">
+            <UserProcessFlow />
+          </Route>
+          <Route path="/userauth">
+            <UserAuth />
+          </Route>
+          <Route path="/">
+            <Login />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
-
-export default App;
