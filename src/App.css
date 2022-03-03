@@ -4,6 +4,9 @@
   background-color: rgb(240, 239, 239);
   position: relative;
 }
+[disabled] {
+  opacity: .3;
+}
 /* 
 .formContainer{
   display: flex;
